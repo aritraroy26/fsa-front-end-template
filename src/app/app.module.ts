@@ -9,26 +9,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { SmallXComponent } from './small-x/small-x.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BackButtonComponent,
-    SmallXComponent,
-    NavBarComponent,
-  ],
+  declarations: [AppComponent, BackButtonComponent, SmallXComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-	AngularFireModule.initializeApp(environment.firebase),
-	AngularFireAuthModule,
-	FormsModule,
-	HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
